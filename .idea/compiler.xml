@@ -11,6 +11,7 @@
         <module name="gateway" />
         <module name="discovery" />
         <module name="system-config" />
+        <module name="Examination" />
       </profile>
       <profile name="Gradle Imported" enabled="true">
         <outputRelativeToContentRoot value="true" />
@@ -22,10 +23,12 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="exam" target="17" />
+      <module name="exam-session" target="17" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="Examination" options="-parameters" />
       <module name="dean" options="-parameters" />
       <module name="discovery" options="-parameters" />
       <module name="gateway" options="-parameters" />
