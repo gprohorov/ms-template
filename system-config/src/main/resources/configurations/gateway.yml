@@ -1,0 +1,23 @@
+eureka:
+  client:
+    register-with-eureka: false
+server:
+  port: 8022
+spring:
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+        - id: dean
+          uri: http://localhost:8070
+          predicates:
+            - Path=/api/v1/departments/**
+        - id: Examination
+          uri: http://localhost:8075
+          predicates:
+            - Path=/api/v1/exams/**
+  application:
+    name: gateway
+

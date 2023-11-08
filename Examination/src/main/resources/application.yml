@@ -1,19 +1,7 @@
-eureka:
-  instance:
-    hostname: localhost
-  client:
-    service-url:
-      defaultZone: http://localhost:8761/eureka
-server:
-  port: 8075
+
 spring:
   application:
-    name: exams
+    name: examination
   config:
     import: optional:configserver:http://localhost:8888
 
-  data:
-    mongodb:
-      database: ms2023
-      host: localhost
-      port: 27017
