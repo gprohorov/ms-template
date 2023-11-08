@@ -14,4 +14,4 @@ spring:
 
 application:
   config:
-    exam-url: http://localhost:8075/api/v1/exams
+    exam-url: http://localhost:8022/api/v1/exams
