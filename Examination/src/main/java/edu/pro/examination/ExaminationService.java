@@ -30,4 +30,12 @@ public class ExaminationService {
     public List<Examination> getAll() {
         return repository.findAll();
     }
+
+    public List<String> getGoodStudentsOfGroup(String group) {
+        List<Examination> exams = repository.findExaminationsByEvaluationGreaterThanEqual(90);
+        return exams.stream()
+                .filter(exam -> exam.getGroup().equals(group))
+                .map(exam -> exam.getName())
+                .toList();
+    }
 }

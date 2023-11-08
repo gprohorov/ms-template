@@ -8,6 +8,7 @@ package edu.pro.examination;
 */
 
 import lombok.RequiredArgsConstructor;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -22,5 +23,10 @@ public class ExaminationController {
     @RequestMapping("")
     public List<Examination> extractAll() {
         return service.getAll();
+    }
+
+    @RequestMapping("/good/{group}")
+    public List<String> extractGoodStudentsOfGroup(@PathVariable String group) {
+        return service.getGoodStudentsOfGroup(group);
     }
 }
