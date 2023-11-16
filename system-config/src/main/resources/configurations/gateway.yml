@@ -21,3 +21,7 @@ spring:
   application:
     name: gateway
 
+management:
+  tracing:
+    sampling:
+      probability: 1.0

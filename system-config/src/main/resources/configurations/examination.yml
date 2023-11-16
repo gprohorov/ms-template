@@ -15,3 +15,7 @@ spring:
       database: ms2023
       host: localhost
       port: 27017
+management:
+  tracing:
+    sampling:
+      probability: 1.0
